@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIA - Human Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --theme-primary: #fb7185;
+      --theme-secondary: #818cf8;
+      --theme-accent: #f43f5e;
+      --theme-bg: #050505;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--theme-bg);
+      color: white;
+    }
+    
+    .font-brand {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .font-serif-brand {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Neural Pulse Animations */
+    @keyframes nia-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(var(--pulse-color, 251, 113, 133), 0.4); transform: scale(1); }
+      70% { box-shadow: 0 0 0 15px rgba(var(--pulse-color, 251, 113, 133), 0); transform: scale(1.02); }
+      100% { box-shadow: 0 0 0 0 rgba(var(--pulse-color, 251, 113, 133), 0); transform: scale(1); }
+    }
+    .nia-active {
+      animation: nia-pulse 3s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+
+    @keyframes gradient-x {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .animate-gradient-x {
+      background-size: 200% 200%;
+      animation: gradient-x 15s ease infinite;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .theme-transition {
+      transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+</head>
+<body class="overflow-hidden h-screen w-screen selection:bg-rose-500/30">
+  <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "NIA - Real-time Voice & Video Companion",
+  "description": "An immersive real-time companion using Gemini Live API for voice and video interaction.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
